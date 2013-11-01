@@ -32,7 +32,7 @@
 ;;;; (set-background-color "black")
 (set-foreground-color "black")
 ;;;; (set-cursor-color "#dbffef")
-(set-cursor-color "#black")
+(set-cursor-color "black")
 
 ;;;; show me line and column nos
 (line-number-mode t)
@@ -78,3 +78,6 @@
   (transpose-lines 1)
   (previous-line 1))
 (global-set-key [(M down)] 'move-line-down)
+
+;; do not auto backup
+(setq backup-directory-alist (quote (("." . "~/.backups"))))
